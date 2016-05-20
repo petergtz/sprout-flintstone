@@ -1,5 +1,9 @@
 #!/usr/bin/env ruby
 
+# This (wellknown) Cheffile is for Librarian-Chef and defines which cookbooks
+# Librarian-Chef should pull in, before executing recipes defined in soloistrc.
+# Librarian-Chef is executed by Soloist.
+
 site 'https://supermarket.getchef.com/api/v1'
 
 cookbook 'sprout-chruby',
@@ -35,6 +39,9 @@ cookbook 'sprout-ssh',
 cookbook 'sprout-jetbrains-editors',
   :github => 'pivotal-sprout/sprout-jetbrains-editors'
 
+cookbook 'sprout-capi',
+  :github => 'petergtz/sprout-capi'
+
 cookbook 'homebrew'
 
-cookbook 'capi', path: 'capi'
+cookbook 'flintstone', path: '.'

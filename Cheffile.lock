@@ -13,6 +13,17 @@ SITE
       chef_handler (>= 0.0.0)
 
 GIT
+  remote: https://github.com/petergtz/sprout-capi
+  ref: master
+  sha: 806b3b03e92385c322183ba4a253b7c4c0a68efc
+  specs:
+    sprout-capi (0.1.0)
+      homebrew (>= 0.0.0)
+      sprout-base (>= 0.0.0)
+      sprout-chruby (>= 0.0.0)
+      sprout-git (>= 0.0.0)
+
+GIT
   remote: https://github.com/pivotal-sprout/osx
   ref: master
   sha: 57820f0c0f4b08e9cff82a57a7489f9dcc9345f7
@@ -111,18 +122,20 @@ GIT
       sprout-osx-settings (>= 0.0.0)
 
 PATH
-  remote: capi
+  remote: .
   specs:
-    capi (0.1.0)
+    flintstone (0.1.0)
+      homebrew (>= 0.0.0)
       sprout-base (>= 0.0.0)
       sprout-chruby (>= 0.0.0)
       sprout-git (>= 0.0.0)
 
 DEPENDENCIES
-  capi (>= 0)
+  flintstone (>= 0)
   homebrew (>= 0)
   osx (>= 0)
   sprout-base (>= 0)
+  sprout-capi (>= 0)
   sprout-chruby (>= 0)
   sprout-git (>= 0)
   sprout-jetbrains-editors (>= 0)
