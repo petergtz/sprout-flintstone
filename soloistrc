@@ -117,12 +117,14 @@ node_attributes:
         - url: https://github.com/cloudfoundry/api-docs
         - url: https://github.com/cloudfoundry/bosh-lite
           update: true
-        - url: https://github.com/cloudfoundry/cf-release
+        - url: https://github.com/suhlig/cf-release
           branch: wip-bits-service
           post_clone_commands:
             - ./scripts/update
             - ./scripts/setup-git-hooks
-        - url: https://github.com/cloudfoundry/sprout-flintstone
+        - url: https://github.com/petergtz/sprout-flintstone
+        - url: https://github.com/cloudfoundry-incubator/bits-service-release
+          recursive: true
     terminal:
       default_profile: 'Pro'
     chruby:
@@ -156,7 +158,6 @@ node_attributes:
         - fasd
     custom_plugins:
       sprout-capi:
-        - bash_it/custom/capi-aliases.bash
         - bash_it/custom/capi-env.bash
         - bash_it/custom/always_duet.bash
         - bash_it/custom/recreate_bosh_lite.bash
@@ -165,6 +166,9 @@ node_attributes:
         - bash_it/custom/get_back_to_work.bash
         - bash_it/custom/delete_orgs.bash
         - bash_it/custom/pullify.bash
+      flintstone:
+        - bash_it/custom/flintstone-aliases.bash
+
   atom:
     packages:
       - go-plus
