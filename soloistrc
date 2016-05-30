@@ -1,237 +1,193 @@
-# TODO clean up and uncomment recipes we want to use
-
 recipes:
 
 # base (required by sprout)
 - sprout-base
-#- sprout-base::bash_it
 - homebrew
-#- homebrew::install_taps
-#- homebrew::install_formulas
-#- homebrew::install_casks
-#
-## apps
-#- capi::iterm2
-#- capi::spectacle
-#
-## settings
-#- sprout-osx-settings
-#- sprout-osx-settings::dock_preferences
-#- sprout-ssh::known_hosts_github
-#
-#-# sprout-chruby
-#- capi::cf_cli
-#
-## development (general)
-#- sprout-base::workspace_directory
-#- sprout-git
-#- sprout-git::default_editor
-#- sprout-git::git_duet
-#- sprout-git::projects
-#
-## development (rails)
-#- sprout-ruby
-#- sprout-mysql
-#- sprout-postgresql
-#
-## apps (editors)
-#- sprout-osx-apps::textmate_preferences
-#- sprout-jetbrains-editors::rubymine
-#
-## runtime-specific
-#- sprout-osx-settings::ntp
-#- sprout-osx-apps::go
-#
-#-# capi
-#
-#n#ode_attributes:
-#  sprout:
-#    git:
-#      domain: pivotal.io
-#      aliases:
-#        - ci duet-commit
-#      global_config:
-#        'url."git@github.com:".pushInsteadOf': 'https://github.com/'
-#      authors:
-#        - initials: dw
-#          name: Dan Wendorf
-#          username: dwendorf
-#        - initials: es
-#          name: Eric Saxby
-#          username: esaxby
-#        - initials: ad
-#          name: Amelia Downs
-#          username: adowns
-#        - initials: ka
-#          name: Kara Alexandra
-#          email: kalexandra@us.ibm.com
-#        - initials: pg
-#          name: Peter Goetz
-#          email: peter.gtz@gmail.com
-#        - initials: ur
-#          name: Urvashi Reddy
-#          username: ureddy
-#        - initials: uu
-#          name: Utako Ueda
-#          username: uueda
-#        - initials: zr
-#          name: Zach Robinson
-#          username: zrobinson
-#        - initials: sl
-#          name: Simon Leung
-#          email: leungs@us.ibm.com
-#        - initials: rr
-#          name: Rizwan Reza
-#          username: rreza
-#      projects:
-#        - url: https://github.com/cloudfoundry/api-docs
-#        - url: https://github.com/cloudfoundry/bosh-lite
-#          update: true
-#        - url: https://github.com/pivotal-cf-experimental/canibump
-#          update: true
-#        - url: https://github.com/cloudfoundry/cf-release
-#          branch: develop
-#          post_clone_commands:
-#            - ./scripts/update
-#            - ./scripts/setup-git-hooks
-#        - url: https://github.com/cloudfoundry-incubator/diego-release
-#          branch: develop
-#          post_clone_commands:
-#            - ./scripts/update
-#        - url: https://github.com/cloudfoundry/docs-services
-#        - url: https://github.com/cloudfoundry/sprout-capi
-#        - url: https://github.com/cloudfoundry/capi-dockerfiles
-#          update: true
-#        - url: https://github.com/cloudfoundry/capi-checkman
-#          update: true
-#        - url: https://github.com/cloudfoundry/capi-ci
-#          update: true
-#    terminal:
-#      default_profile: 'Pro'
-#    settings:
-#      clock_format: EEE MMM d  h:mm:ss a
-#    dock_preferences:
-#      orientation: 'bottom'
-#      auto_hide: true
-#      clear_apps: true
-#      tile_size: 35
-#      magnification: false
-#    chruby:
-#      default_ruby: '2.3'
-#      rubies:
-#        ruby:
-#          - '2.3.1'
-#
- # bosh:
-#    directors:
-#      - name: lite
-#        url: https://192.168.50.4
-#      - name: tabasco
-#        url: https://bosh.tabasco.cf-app.com
-#      - name: a1
-#        url: https://bosh.a1.cf-app.com
-#      - name: runtime1
-#        url: https://micro.runtime1.cf-app.com
-#      - name: runtime2
-#        url: https://micro.runtime2.cf-app.com
-#      - name: runtime-bb-2
-#        url: https://bosh.runtime-bb-2.cf-app.com
-#      - name: runtime-bb-1
-#        url: https://bosh.runtime-bb-1.cf-app.com
-#      - name: cat
-#        url: https://bosh.cat.wild.cf-app.com
-#      - name: mouse
-#        url: https://bosh.mouse.wild.cf-app.com
-#      - name: runtime-ci
-#        url: https://bosh.runtime.ci.cf-app.com
-#      - name: minimal
-#        url: https://54.165.111.247
-#      - name: wasabi
-#        url: https://bosh.wasabi.cf-app.com
-#      - name: xena
-#        url: https://bosh.xena.cf-app.com
-#
- # versions:
-#    bash_it: HEAD
-#
- # bash_it:
-#    enabled_plugins:
-#      aliases:
-#        - general
-#        - bundler
-#        - git
-#      completion:
-#        - defaults
-#        - git
-#        - ssh
-#      plugins:
-#        - ssh
-#        - git
-#        - fzf
-#        - fasd
-#    custom_plugins:
-#      capi:
-#        - bash_it/custom/capi-aliases.bash
-#        - bash_it/custom/capi-env.bash
-#        - bash_it/custom/always_duet.bash
-#        - bash_it/custom/recreate_bosh_lite.bash
-#        - bash_it/custom/setup-direnv.bash
-#        - bash_it/custom/fast_bosh.bash
-#        - bash_it/custom/get_back_to_work.bash
-#        - bash_it/custom/delete_orgs.bash
-#        - bash_it/custom/pullify.bash
-#  atom:
-#    packages:
-#      - go-plus
-#      - gorename
-#  homebrew:
-#    formulas:
-#      - ack
-#      - aria2
-#      - awscli
-#      - bosh-init
-#      - cf-cli
-#      - direnv
-#      - dishy
-#      - fasd
-#      - name: fzf
-#        head: true
-#      - jq
-#      - node
-#      - pstree
-#      - qt
-#      - s3cmd
-#      - ssh-copy-id
-#      - tig
-#      - the_silver_searcher
-#      - tmux
-#      - tree
-#      - name: universal-ctags
-#        head: true
-#      - watch
-#      - wget
-#    casks:
-#      - flycut
-#      - rowanj-gitx
-#      - github-desktop
-#      - google-chrome
-#      - itsycal
-#      - karabiner
-#      - macvim
-#      - menumeters
-#      - mou
-#      - sequel-pro
-#      - screenhero
-#      - slack
-#      - sourcetree
-#      - vagrant
-#      - virtualbox
-#      - atom
-#      - xscope
-#    taps:
-#      - cloudfoundry/tap
-#      - universal-ctags/universal-ctags
-#      - businesscritical/tap
-#  keyboard_preferences:
-#    key_repeat_rate_lower_is_faster: 2
-#    initial_repeat_delay_lower_is_shorter: 15#
+- homebrew::install_taps
+- homebrew::install_formulas
+- homebrew::install_casks
+
+# Install bash-it
+- sprout-base::bash_it
+
+
+# Brew install nightly iTerm2 with special color config etc.
+# - sprout-capi::iterm2
+
+# Brew install Spectacle, keyboard short-cuts for OS X window management
+# - sprout-capi::spectacle
+
+
+# Make some system wide changes
+# Configuration goes into node_attributes.
+# See sprout-capi cookbook soloistrc for examples.
+# - sprout-osx-settings
+# - sprout-osx-settings::dock_preferences
+
+# Add github to known_hosts if it isn't already in there:
+- sprout-ssh::known_hosts_github
+
+# Install rubies and chruby
+- sprout-chruby
+
+# Install some cf plugins such as Diego enabler etc.
+# - sprout-capi::cf_cli
+
+# Create a "workspace" directory
+# - sprout-base::workspace_directory
+
+
+# Brew install git and set global config through node_attributes:
+- sprout-git
+
+# Use vim as editor for git
+# - sprout-git::default_editor
+
+# brew install git-duet
+- sprout-git::git_duet
+
+# git clone projects listed in node_attributes
+- sprout-git::projects
+
+# Install mysql
+# - sprout-mysql
+
+# Install postgresql
+# - sprout-postgresql
+
+# Provide config file for CATs
+- sprout-capi::acceptance_tests
+
+# Configure bosh director aliases through node_attributes
+- sprout-capi::bosh_directors
+
+# Install Concourse fly CLI
+- sprout-capi::concourse_cli
+
+# Install spiff
+- sprout-capi::spiff
+
+# Brew install atom editor
+- sprout-capi::atom
+
+# Install checkman
+- sprout-capi::checkman
+
+# Install bosh CLI for all installed ruby versions
+- sprout-capi::bosh
+
+
+node_attributes:
+  sprout:
+    git:
+      domain: de.ibm.com
+      aliases:
+        - ci duet-commit
+      global_config:
+        'url."git@github.com:".pushInsteadOf': 'https://github.com/'
+      authors:
+        - initials: pego_ibm
+          name: Peter Goetz
+          username: pego
+        - initials: pego
+          name: Peter Goetz
+          email: peter.gtz@gmail.com
+        - initials: masc
+          name: Marc Schunk
+          username: Marc.Schunk
+        - initials: su
+          name: Steffen Uhlig
+          username: Steffen.Uhlig
+        - initials: bus
+          name: Berhard Schmid
+          username: Bernhard.Schmid
+        - initials: hph
+          name: Heinz Peter Hippenstiel
+          email: hippenstiel
+        - initials: sm
+          name: Simon Moser
+          username: smoser
+        - initials: ae
+          name: Alexander Egurnov
+          username: egurnov
+        - initials: md
+          name: Matthias Diester
+          username: mdiester
+      projects:
+        - url: https://github.com/cloudfoundry/api-docs
+        - url: https://github.com/cloudfoundry/bosh-lite
+          update: true
+        - url: https://github.com/cloudfoundry/cf-release
+          branch: wip-bits-service
+          post_clone_commands:
+            - ./scripts/update
+            - ./scripts/setup-git-hooks
+        - url: https://github.com/cloudfoundry/sprout-flintstone
+    terminal:
+      default_profile: 'Pro'
+    chruby:
+      default_ruby: '2.3'
+      rubies:
+        ruby:
+          - '2.3.1'
+
+  bosh:
+    directors:
+      - name: lite
+        url: https://192.168.50.4
+
+  versions:
+    bash_it: HEAD
+
+  bash_it:
+    enabled_plugins:
+      aliases:
+        - general
+        - bundler
+        - git
+      completion:
+        - defaults
+        - git
+        - ssh
+      plugins:
+        - ssh
+        - git
+        - fzf
+        - fasd
+    custom_plugins:
+      sprout-capi:
+        - bash_it/custom/capi-aliases.bash
+        - bash_it/custom/capi-env.bash
+        - bash_it/custom/always_duet.bash
+        - bash_it/custom/recreate_bosh_lite.bash
+        - bash_it/custom/setup-direnv.bash
+        - bash_it/custom/fast_bosh.bash
+        - bash_it/custom/get_back_to_work.bash
+        - bash_it/custom/delete_orgs.bash
+        - bash_it/custom/pullify.bash
+  atom:
+    packages:
+      - go-plus
+  homebrew:
+    formulas:
+      - cf-cli
+      - direnv
+      - jq
+      - tig
+      - the_silver_searcher
+      - tmux
+    casks:
+      - rowanj-gitx
+      - google-chrome
+      - screenhero
+      - slack
+      - vagrant
+      - virtualbox
+      - atom
+    taps:
+      - cloudfoundry/tap
+      - universal-ctags/universal-ctags
+      - businesscritical/tap
+  keyboard_preferences:
+    key_repeat_rate_lower_is_faster: 2
+    initial_repeat_delay_lower_is_shorter: 15

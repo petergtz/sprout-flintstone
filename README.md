@@ -1,22 +1,25 @@
 # sprout-wrap
 
-[![Build Status](https://travis-ci.org/cloudfoundry/sprout-capi.png?branch=master)](https://travis-ci.org/cloudfoundry/sprout-capi)
-
 This project uses [soloist](https://github.com/mkocher/soloist) and [librarian-chef](https://github.com/applicationsonline/librarian-chef)
 to run a subset of the recipes in sprout's cookbooks.
 
-[Fork it](https://github.com/pivotal-sprout/sprout-wrap/fork) to 
-customize its [attributes](http://docs.chef.io/attributes.html) in [soloistrc](/soloistrc) and the list of recipes 
-you'd like to use for your team. You may also want to add other cookbooks to its [Cheffile](/Cheffile), perhaps one 
-of the many [community cookbooks](https://supermarket.chef.io/cookbooks). By default it configures an OS X 
+[Fork it](https://github.com/pivotal-sprout/sprout-wrap/fork) to
+customize its [attributes](http://docs.chef.io/attributes.html) in [soloistrc](/soloistrc) and the list of recipes
+you'd like to use for your team. You may also want to add other cookbooks to its [Cheffile](/Cheffile), perhaps one
+of the many [community cookbooks](https://supermarket.chef.io/cookbooks). By default it configures an OS X
 Mavericks workstation for Ruby development.
 
-Finally, if you've never used Chef before - we highly recommend you buy &amp; watch [this excellent 17 minute screencast](http://railscasts.com/episodes/339-chef-solo-basics) by Ryan Bates. 
+Finally, if you've never used Chef before - we highly recommend you buy &amp; watch [this excellent 17 minute screencast](http://railscasts.com/episodes/339-chef-solo-basics) by Ryan Bates.
+
+## Overview (Current Understanding)
+
+`bundle exec soloist` first runs Librarian-Chef and lets it pull in all cookbooks defined in Cheffile. Then it runs all recipes in soloistrc.
+The recipes in their use attributes defined in the bottom part of soloistrc.
 
 ## Installation under Mavericks (OS X 10.9)
 
 ### 1. Install Command Line Tools
-  
+
     xcode-select --install
 
 If you receive a message about the update server being unavailable and are on Mavericks, then you already have the command line tools.
