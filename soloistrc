@@ -184,6 +184,7 @@ node_attributes:
       - the_silver_searcher
       - tmux
       - lastpass-cli
+      - fasd
     casks:
       - rowanj-gitx
       - google-chrome
