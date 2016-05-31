@@ -44,4 +44,6 @@ cookbook 'sprout-capi',
 
 cookbook 'homebrew'
 
+cookbook "ssh"
+
 cookbook 'flintstone', path: '.'

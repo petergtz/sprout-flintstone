@@ -14,6 +14,7 @@ SITE
       seven_zip (>= 0.0.0)
     seven_zip (2.0.1)
       windows (>= 1.2.2)
+    ssh (0.10.10)
     windows (1.42.0)
       chef_handler (>= 0.0.0)
 
@@ -151,4 +152,5 @@ DEPENDENCIES
   sprout-postgresql (>= 0)
   sprout-ruby (>= 0)
   sprout-ssh (>= 0)
+  ssh (>= 0)
 

@@ -76,6 +76,9 @@ recipes:
 # Install bosh CLI for all installed ruby versions
 - sprout-capi::bosh
 
+# Add flintstone aliases to .ssh/config
+flintstone::ssh_config
+
 
 node_attributes:
   sprout:
