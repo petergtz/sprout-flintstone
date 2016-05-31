@@ -31,7 +31,7 @@ recipes:
 - sprout-chruby
 
 # Install some cf plugins such as Diego enabler etc.
-# - sprout-capi::cf_cli
+- sprout-capi::cf_cli
 
 # Create a "workspace" directory
 # - sprout-base::workspace_directory
