@@ -180,6 +180,7 @@ node_attributes:
       - tig
       - the_silver_searcher
       - tmux
+      - lastpass-cli
     casks:
       - rowanj-gitx
       - google-chrome
