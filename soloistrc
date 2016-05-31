@@ -71,7 +71,7 @@ recipes:
 - sprout-capi::atom
 
 # Install checkman
-- sprout-capi::checkman
+# - sprout-capi::checkman
 
 # Install bosh CLI for all installed ruby versions
 - sprout-capi::bosh
