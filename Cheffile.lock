@@ -20,7 +20,7 @@ SITE
 GIT
   remote: https://github.com/petergtz/sprout-capi
   ref: master
-  sha: feb08ed14b859e7dbde6271cd716e7f68ec266f8
+  sha: f6134570642e8beff7b35d4afb5ad82b3fe5d1f9
   specs:
     sprout-capi (0.1.0)
       homebrew (>= 0.0.0)
