@@ -185,6 +185,7 @@ node_attributes:
       - tmux
       - lastpass-cli
       - fasd
+      - noti
     casks:
       - rowanj-gitx
       - google-chrome

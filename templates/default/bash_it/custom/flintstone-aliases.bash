@@ -17,6 +17,8 @@ alias qnd-deploy-notify='(cd ~/workspace/cf-release && scripts/deploy --no-manif
 alias qnd-deploy-diego-notify='(cd ~/workspace/diego-release && bosh --parallel 10 sync blobs && scripts/update && scripts/deploy && bosh deployment ~/workspace/cf-release/bosh-lite/deployments/cf.yml ; get_back_to_work)'
 alias qnd-deploy-manifest-notify='(cd ~/workspace/cf-release && scripts/deploy ; get_back_to_work)'
 
+alias gfd='bosh create release --force && bosh upload release && noti bosh -n deploy'
+
 # PSQL
 alias psql-bosh-lite='psql -h 10.244.0.30 -p 5524 -U ccadmin ccdb'
 
