@@ -1,27 +1,28 @@
 SITE
   remote: https://supermarket.getchef.com/api/v1
   specs:
-    build-essential (4.0.0)
-      mingw (>= 0.0.0)
+    build-essential (6.0.0)
+      compat_resource (>= 12.10)
+      mingw (>= 1.1)
       seven_zip (>= 0.0.0)
     chef_handler (1.4.0)
-    compat_resource (12.10.4)
+    compat_resource (12.10.5)
     dmg (2.4.0)
     homebrew (2.1.0)
       build-essential (>= 2.1.2)
-    mingw (1.0.0)
+    mingw (1.1.0)
       compat_resource (>= 0.0.0)
       seven_zip (>= 0.0.0)
     seven_zip (2.0.1)
       windows (>= 1.2.2)
     ssh (0.10.10)
-    windows (1.42.0)
+    windows (1.43.0)
       chef_handler (>= 0.0.0)
 
 GIT
   remote: https://github.com/petergtz/sprout-capi
   ref: master
-  sha: f6134570642e8beff7b35d4afb5ad82b3fe5d1f9
+  sha: 87d8c530748b8016f5b77f0c567ad441a608f447
   specs:
     sprout-capi (0.1.0)
       homebrew (>= 0.0.0)
@@ -39,7 +40,7 @@ GIT
 GIT
   remote: https://github.com/pivotal-sprout/sprout-base
   ref: master
-  sha: 689f8b6d2a679c076cf41e8fc7ab3cda9617d4fd
+  sha: fe8719337275808d2a6a33b2d60561f36c2272a5
   specs:
     sprout-base (0.5.0)
       homebrew (>= 0.0.0)
@@ -56,7 +57,7 @@ GIT
 GIT
   remote: https://github.com/pivotal-sprout/sprout-git
   ref: master
-  sha: d50840b4510e5cdfda99bbbe04b9e3813176686c
+  sha: b83ca714a6040dc1be153fc304f87e41c5e23da9
   specs:
     sprout-git (0.2.1)
       homebrew (>= 0.0.0)
@@ -94,7 +95,7 @@ GIT
 GIT
   remote: https://github.com/pivotal-sprout/sprout-osx-settings
   ref: master
-  sha: 6e9b7100a450cb75a1f520bb8ec3db675b09a712
+  sha: 62630bea50cea7b24058854a5a216c3a4dbbe4ef
   specs:
     sprout-osx-settings (0.1.0)
       homebrew (>= 0.0.0)
@@ -104,7 +105,7 @@ GIT
 GIT
   remote: https://github.com/pivotal-sprout/sprout-postgresql
   ref: master
-  sha: c4a18831e938272db29137bbbc7b4a5f9a8efca1
+  sha: 97558d741bc7f0e1ea6c2f896dd2a3706b26c7ec
   specs:
     sprout-postgresql (0.1.0)
       homebrew (>= 1.5.4)
@@ -136,6 +137,7 @@ PATH
       sprout-capi (>= 0.0.0)
       sprout-chruby (>= 0.0.0)
       sprout-git (>= 0.0.0)
+      ssh (>= 0.0.0)
 
 DEPENDENCIES
   flintstone (>= 0)
