@@ -77,7 +77,7 @@ recipes:
 - sprout-capi::bosh
 
 # Add flintstone aliases to .ssh/config
-flintstone::ssh_config
+- flintstone::ssh_config
 
 
 node_attributes:
@@ -101,21 +101,12 @@ node_attributes:
         - initials: su
           name: Steffen Uhlig
           username: Steffen.Uhlig
-        - initials: bus
-          name: Berhard Schmid
-          username: Bernhard.Schmid
-        - initials: hph
-          name: Heinz Peter Hippenstiel
-          email: hippenstiel
         - initials: sm
           name: Simon Moser
           username: smoser
-        - initials: ae
-          name: Alexander Egurnov
-          username: egurnov
-        - initials: md
-          name: Matthias Diester
-          username: mdiester
+        - initials: ts
+          name: Tiago Scolari
+          email: tscolari@pivotal.io
       projects:
         - url: https://github.com/cloudfoundry/api-docs
         - url: https://github.com/cloudfoundry/bosh-lite
